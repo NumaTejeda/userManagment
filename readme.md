@@ -1,6 +1,6 @@
 # User Management CRUD Application
 
-La Applicacion fue hecha meramente con fines educativos y didacticos que introduce varios temas importantes en el desarrollo web y la programación en general. El front es levantado desde el servidor (SSR) utlizando boostrap para generar una vista simple y amigable que permite interactuar con el backend de manera amigable.
+La Applicacion fue hecha meramente con fines educativos y didacticos que introduce varios temas importantes en el desarrollo web y la programación en general. El front es levantado desde el servidor (SSR) utlizando boostrap para generar una vista simple que permite interactuar con el backend de manera amigable.
 
 ## Descripción
 
