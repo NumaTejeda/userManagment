@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form id="form" method="post" class="border border-primary border-2 mx-auto p-2 w-50 mt-3 font-monospace">
+            <h1>Inicia Sesión</h1>
+            <label for="usuario">Usuario: </label><br>
+            <input type="text" name="usuario" class="w-100 mb-2" id="user" autocomplete="name" required><br>
+            <label for="pass">Contraseña: </label><br>
+            <input type="password" name="pass" class="w-100 mb-2" id="pass" autocomplete="new-password" required><br>
+            <label for="pass2">Repite tu contraseña: </label><br>
+            <input type="password" class="w-100 mb-2" id="pass2" autocomplete="new-password" required><br>
+            <hr>
+            <button type="submit" class="btn btn-primary w-100 mt-2" id="submit">Inicia Sesion</button>
+            <a href="/registro.html" class="btn btn-outline-primary w-100 my-2 list-group">Registrate</a>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="/auth/login.js" type="module"></script>
+</body>
+
+</html>
+
+<!-- fetch('/endpoint', {
+    method: 'POST', // Método HTTP: GET, POST, PUT, DELETE, etc.
+    headers: {
+        'Content-Type': 'application/json', // Tipo de contenido de la solicitud
+        'Authorization': 'Bearer <token>', // Cabecera de autorización
+        'Accept': 'application/json', // Tipo de contenido esperado en la respuesta
+        'User-Agent': 'MyApp/1.0', // Información del cliente
+        'Cache-Control': 'no-cache', // Control de caché
+        'X-CSRF-Token': '<token>' // Token CSRF
+    },
+    body: JSON.stringify({ username: 'user', password: 'pass' }), // Cuerpo de la solicitud
+    cache: 'no-store', // Política de caché (no-store, reload, no-cache, etc.)
+    credentials: 'include', // Envío de credenciales (omit, same-origin, include)
+    redirect: 'manual', // Comportamiento de redirección (follow, error, manual)
+    referrer: 'https://example.com/page', // URL de referencia
+    mode: 'cors' // Modo de la solicitud (cors, no-cors, same-origin)
+}) -->
