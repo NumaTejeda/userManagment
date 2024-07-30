@@ -1,5 +1,7 @@
 # User Management CRUD Application
 
+La Applicacion fue hecha meramente con fines educativos y didacticos que introduce varios temas importantes en el desarrollo web y la programación en general. El front es levantado desde el servidor (SSR) utlizando boostrap para generar una vista simple y amigable que permite interactuar con el backend de manera amigable.
+
 ## Descripción
 
 Esta es una aplicación CRUD (Create, Read, Update, Delete) construida con Node.js y Express, conectada a una base de datos MySQL. Permite crear, eliminar, actualizar y listar usuarios. Utiliza bcrypt para encriptar contraseñas y dotenv para manejar variables de entorno. La aplicación emplea server-side rendering (SSR), Bootstrap para el diseño del frontend y SweetAlert2 para las alertas informativas. También incluye funcionalidad de inicio de sesión utilizando JWT (JSON Web Tokens), almacenando el token en una cookie para mayor seguridad.
@@ -48,15 +50,17 @@ Esta es una aplicación CRUD (Create, Read, Update, Delete) construida con Node.
 
 5. Abre tu navegador y visita http://localhost:3100 para ver la aplicación en acción.
 
-##Funcionalidades
+## Funcionalidades
 
     - Crear Usuario: Añade un nuevo usuario con un nombre y contraseña encriptada.
     - Listar Usuarios: Muestra una lista de todos los usuarios registrados.
-    - Actualizar Usuario: Permite modificar la información de un usuario existente.
-    - Eliminar Usuario: Elimina un usuario de la base de datos.
-    - Iniciar Sesión: Permite a los usuarios autenticarse utilizando JWT, almacenando el token en una cookie.
+    - Actualizar Usuario: Permite modificar el nombre de un usuario existente.
+    - Eliminar Usuario: Elimina un usuario de la base de datos segun su id.
+    - Registro de usuario: Permite registrate como usuario para luego iniciar sesión.
+    - Iniciar Sesión: Permite a los usuarios autenticarse utilizando JWT,
+      almacenando el token en una cookie.
 
-##Contribuir
+## Contribuir
 
 Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
@@ -65,3 +69,7 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
     3. Realiza tus cambios y haz un commit (git commit -m 'Añade nueva funcionalidad').
     4. Envía tus cambios (git push origin feature-nueva-funcionalidad).
     5. Crea un nuevo Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
