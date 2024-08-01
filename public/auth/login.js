@@ -32,7 +32,7 @@ form.addEventListener('submit', async (event) => {
                 Swal.fire({
                     icon: 'success',
                     title: '¡Éxito!',
-                    text: 'Que bien!',
+                    text: 'Inicio de secion exitoso!',
                     timer: 3000,
                     timerProgressBar: true,
                 });
