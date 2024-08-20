@@ -3,7 +3,7 @@ import bcript from "bcryptjs";
 
 export const createItem = async (req, res) => {
     try {
-        let { name, pass } = await req.body;
+        let { name, pass } = req.body;
         if (typeof name === 'undefined' || name === null || name.trim().length === 0) {
             res.status(400).json({ error: 'Verifica el nombre por favor' });
             return;
