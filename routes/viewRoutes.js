@@ -9,26 +9,25 @@ const __dirname = dirname(__filename)
 
 const router = express.Router();
 
+const sendHtml = (res, relativePath) => {
+    res.sendFile(path.join(__dirname, relativePath));
+};
+
 router.get('/', authenticateToken, (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/auth/index.html'));
+    sendHtml(res, '../views/auth/index.html');
 })
+
 router.get('/login.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/auth/login.html'))
-})
+    sendHtml(res, '../views/auth/login.html')
+});
 router.get('/registro.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/auth/registro.html'))
+    sendHtml(res, '../views/auth/registro.html')
 });
-router.get('/create.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/crud/create.html'));
-});
-router.get('/delete.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/crud/delete.html'));
-});
-router.get('/update.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/crud/update.html'));
-});
-router.get('/read.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/crud/read.html'));
+
+// Rutas para operaciones CRUD
+const crudPaths = ['create', 'delete', 'update', 'read'];
+crudPaths.forEach(page => {
+    router.get(`/${page}.html`, (req, res) => sendHtml(res, `../views/crud/${page}.html`));
 });
 
 export default router;

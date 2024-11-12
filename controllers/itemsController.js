@@ -18,15 +18,20 @@ export const createItem = async (req, res) => {
     }
 }
 export const getItems = async (req, res) => {
-    let [result] = await connection.execute('SELECT * FROM users'); //traes contraseñas y todo (!!!!!)
-    res.json(result)
+    try{
+        const [result]= await connection.execute('SELECT id_user, user_name FROM users'); //traes contraseñas y todo (!!!!!)
+        res.json(result);
+    }catch(e){
+        console.log(e)
+    }
+
 }
 export const deleteItem = async (req, res) => {
     try {
         const { id } = req.params;
-        let idNumber = parseInt(id)
-        let select = 'SELECT * FROM users WHERE id_user = (?)'
-        let [resSelect] = await connection.execute(select, [idNumber])
+        const idNumber = parseInt(id)
+        const select = 'SELECT * FROM users WHERE id_user = (?)'
+        const [resSelect] = await connection.execute(select, [idNumber])
         if (resSelect.length > 0) {
             let query = 'DELETE FROM users WHERE id_user = (?)'
             let [result] = await connection.execute(query, [idNumber]);
