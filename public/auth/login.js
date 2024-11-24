@@ -27,7 +27,6 @@ form.addEventListener('submit', async (event) => {
                 body: JSON.stringify({ user_name: user_name, user_pass: user_pass })
             })
             const data = await response.json()
-            console.log(data)
             if (response.ok) {
                 Swal.fire({
                     icon: 'success',
