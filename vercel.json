@@ -5,6 +5,7 @@
       "use": "@vercel/node"
     }
   ],
+  "includeFiles": ["views/**/*"],
   "routes": [
     {
       "src": "/(.*)",

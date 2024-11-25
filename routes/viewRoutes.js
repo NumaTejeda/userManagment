@@ -18,7 +18,7 @@
     })
 
     router.get('/login.html', (req, res) => {
-        sendHtml(res, '/auth/login.html')
+        sendHtml(res, '../views/auth/login.html')
     });
     router.get('/registro.html', (req, res) => {
         sendHtml(res, '../views/auth/registro.html')
